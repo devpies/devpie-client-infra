@@ -15,7 +15,7 @@ spec:
       imagePullSecrets:
         - name: ghcr-auth
       containers:
-        - image: ghcr.io/devpies/spa-client:6f580ef
+        - image: ghcr.io/ivorscott/spa-client:6f580ef
           name: spa-client
           stdin: true
           tty: true
@@ -30,7 +30,7 @@ spec:
             - name: PORT
               value: "80"
             - name: REACT_APP__BACKEND
-              value: "https://client-backend.devpie.local/v1"
+              value: "https://client-backend.local/v1"
             - name: REACT_APP__FRESHBOOKS_CLIENT_ID
               valueFrom:
                 secretKeyRef:
