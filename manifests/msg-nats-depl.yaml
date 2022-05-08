@@ -62,11 +62,11 @@ spec:
               "2",
               "-SDV", # Enable STAN debugging output and tracing
               "-cid", # Cluster ID (default: test-cluster)
-              "devpie-client",
+              "client",
             ]
       initContainers:
         - name: schema-migration
-          image: devpies/msg-db-migration:v000002
+          image: ivorscott/msg-db-migration:v000002
           env:
             - name: DB_URL
               valueFrom:
