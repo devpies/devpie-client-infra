@@ -9,22 +9,22 @@ spec:
   entryPoints:
     - websecure
   routes:
-    - match: Host(`qa.devpie.io`)
+    - match: Host(`qa.client-domain.com`)
       kind: Rule
       services:
         - name: spa-client-svc
           port: 80
-    - match: Host(`qa.devpie.io`) && PathPrefix(`/api/v1/projects`)
+    - match: Host(`qa.client-domain.com`) && PathPrefix(`/api/v1/projects`)
       kind: Rule
       services:
         - name: mic-projects-svc
           port: 4020
-    - match: Host(`qa.devpie.io`) && PathPrefix(`/api/v1/users`)
+    - match: Host(`qa.client-domain.com`) && PathPrefix(`/api/v1/users`)
       kind: Rule
       services:
         - name: mic-users-svc
           port: 4000
-    - match: Host(`qa.devpie.io`) && PathPrefix(`/api/v1/accounting`)
+    - match: Host(`qa.client-domain.com`) && PathPrefix(`/api/v1/accounting`)
       kind: Rule
       services:
         - name: app-accounting-svc
