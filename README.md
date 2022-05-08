@@ -1,4 +1,4 @@
-# devpie-client-infra
+# client-infra
 
 contents:
 
