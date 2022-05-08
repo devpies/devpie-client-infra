@@ -44,4 +44,4 @@ ENV_ZONE_ID=xxxxxxxxxxxxxx
 
 - [argo cd](https://argoproj.github.io/argo-cd/getting_started/) deployment detects changes in this repository
 
-- [devpie-client-core github workflows](https://github.com/devpies/devpie-client-core/tree/main/.github/workflows) clone this repository and updates manifests with new image tag
+- [client-core github workflows](https://github.com/ivorscott/client-core/tree/main/.github/workflows) clone this repository and updates manifests with new image tag
