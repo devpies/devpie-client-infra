@@ -14,7 +14,7 @@ spec:
       imagePullSecrets:
         - name: ghcr-auth
       containers:
-        - image: ghcr.io/devpies/mic-projects:f84a677
+        - image: ghcr.io/ivorscott/mic-projects:f84a677
           name: mic-projects
           resources:
             requests:
@@ -27,7 +27,7 @@ spec:
             - name: API_WEB_PORT
               value: ":4000"
             - name: API_WEB_CORS_ORIGINS
-              value: "https://localhost:3000, https://devpie.local, https://qa.devpie.io"
+              value: "https://localhost:3000, https://client.local, https://qa.client.io"
             - name: API_WEB_AUTH_DOMAIN
               valueFrom:
                 secretKeyRef:
@@ -63,10 +63,10 @@ spec:
             - name: API_NATS_CLIENT_ID
               value: "mic-projects"
             - name: API_NATS_CLUSTER_ID
-              value: "devpie-client"
+              value: "client"
       initContainers:
         - name: schema-migration
-          image: devpies/mic-db-projects-migration:v000016
+          image: ivorscott/mic-db-projects-migration:v000016
           env:
             - name: DB_URL
               valueFrom:
