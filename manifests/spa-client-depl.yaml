@@ -15,7 +15,7 @@ spec:
       imagePullSecrets:
         - name: ghcr-auth
       containers:
-        - image: ghcr.io/ivorscott/spa-client:6f580ef
+        - image: ghcr.io/ivorscott/spa-client:62f88db
           name: spa-client
           stdin: true
           tty: true
